@@ -95,7 +95,7 @@ public class LombokExamples {
         public int timeout;
     }
 
-    //мы можем обмануть компилятор Java, заставив его обрабатывать проверенные исключения как непроверенные
+    //мы можем обмануть компилятор Java, заставив его обрабатывать проверяемые исключения как непроверяемые
     @SneakyThrows
     public static void throwSneakyIOExceptionUsingLombok() {
         throw new IOException("lombok sneaky");
