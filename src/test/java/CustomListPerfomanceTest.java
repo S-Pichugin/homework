@@ -1,3 +1,4 @@
+import my.CustomLinkedList;
 import my.CustomList;
 
 import java.util.ArrayList;
@@ -11,9 +12,11 @@ public class CustomListPerfomanceTest {
         testMassiveInsertion(new CustomList<>(), "CustomList");
         testMassiveInsertion(new ArrayList<>(), "ArrayList");
         testMassiveInsertion(new LinkedList<>(), "LinkedList");
+        testMassiveInsertion(new CustomLinkedList<>(), "CustomLinkedList");
         testAddRemoveFirst(new CustomList<>(), "CustomList");
         testAddRemoveFirst(new ArrayList<>(), "ArrayList");
         testAddRemoveFirst(new LinkedList<>(), "LinkedList");
+        testAddRemoveFirst(new CustomLinkedList<>(), "CustomLinkedList");
     }
 
     private static void testMassiveInsertion(List<Integer> list, String listType) {

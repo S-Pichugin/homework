@@ -1,3 +1,4 @@
+import my.CustomLinkedList;
 import my.CustomList;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -14,7 +15,8 @@ public class CustomListTest {
     static Stream<List<String>> listProvider() {
         return Stream.of(
                 new CustomList<>(),
-                new ArrayList<>()
+                new ArrayList<>(),
+                new CustomLinkedList<>()
         );
     }
 
