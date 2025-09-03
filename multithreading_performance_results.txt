@@ -1,0 +1,14 @@
+Thread Count | Method | Time (ms)
+-------------|--------|-----------
+1            | Stream | 96      
+1            | Thread| 83      
+
+10           | Stream | 17      
+10           | Thread| 21      
+
+100          | Stream | 35      
+100          | Thread| 33      
+
+1000         | Stream | 213     
+1000         | Thread| 186     
+
