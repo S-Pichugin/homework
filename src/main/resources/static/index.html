@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Custom Web Server</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    img { max-width: 200px; margin: .5rem; }
+  </style>
+  <script>
+    async function loadStats() {
+      const r = await fetch('/api/stats');
+      const j = await r.json();
+      document.getElementById('stats').textContent = JSON.stringify(j);
+    }
+    async function loadTime() {
+      const r = await fetch('/api/time');
+      document.getElementById('time').textContent = await r.text();
+    }
+    async function echo() {
+      const r = await fetch('/api/echo', { method: 'POST', body: 'Hello World' });
+      document.getElementById('echo').textContent = await r.text();
+    }
+    window.onload = () => { loadStats(); loadTime(); };
+  </script>
+  </head>
+<body>
+  <h1>It works!</h1>
+  <p>Stats: <code id="stats"></code></p>
+  <p>Time: <code id="time"></code></p>
+  <p>Echo: <code id="echo"></code></p>
+  <button onclick="echo()">Echo</button>
+  <div>
+    <img src="/static/sample.png" alt="sample"/>
+  </div>
+</body>
+</html>
+
+
